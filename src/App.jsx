@@ -18,7 +18,7 @@ function App() {
   const privateKey = '1e55101072ec2535e7792d9a0680210b7bbdf06f'
   const time = Number(new Date())
   const hash = md5(time + privateKey + publicKey)
-  const url = `http://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&offset=${current}`
+  const url = `https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&offset=${current}`
 
   async function chamarAPI() {
     const res = await axios.get(url)
